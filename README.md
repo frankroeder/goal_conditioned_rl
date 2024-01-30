@@ -36,15 +36,12 @@ python train.py n_epochs=10 agent=ddpg env_name=FetchPush-v2 hindsight=her
 python train.py n_epochs=10 agent=sac env_name=FetchPush-v2 hindsight=her agent.critic.dropout=0.01
 ```
 
-### Multi process
+### Multiple processes
 ```bash
 mpirun -np 4 python -u train.py n_epochs=10 agent=sac env_name=FetchPush-v2 hindsight=her
 ```
 
-### Docker
-Have a look at the `Dockerfile` to run training with Docker.
-
-## Enjoy
+## Enjoy your trained agent
 ```bash
 python demo.py --demo_path <path to the trial folder>
 # or
