@@ -1,0 +1,6 @@
+# Hindsight Experience Replay (HER)
+name: 'her'
+# ratio of transitions to be replace
+replay_k: 4
+# the replay strategy "episode" "future" "final"
+replay_strategy: 'future'

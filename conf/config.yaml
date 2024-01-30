@@ -1,0 +1,55 @@
+hydra:
+  job:
+    chdir: True
+
+defaults:
+  - agent: sac
+  - hindsight: her
+  - misc.yaml
+  - intrinsic: null
+  - _self_       # after schema
+  - override hydra/output: custom
+  - override hydra/job_logging: custom
+  - override hydra/hydra_logging: none
+
+#############
+#  General  #
+#############
+
+env_name: 'FetchPush-v2'
+# random seed for reproducability, setting 'null' randomly samples a seed
+seed: null
+# normalized inputs are clipped to be in [-clip_range, clip_range]
+clip_range: 5
+
+# the number of epochs to train the agent
+# env steps per epoch = n_cycles * episode_batch_size * max_env_steps
+n_epochs: 10
+# number of episodes per epoch (x episode_batch_size)
+n_cycles: 50
+# update-to-data ratio (is multiplied by episode_batch_size)
+utd_ratio: 10
+# number of evaluation episodes
+n_test_rollouts: 20
+# the size of the replay buffer
+buffer_size: 1_000_000
+# the batch size for actor-critic training
+batch_size: 256
+# the discount factor
+gamma: 0.98
+# embedding size of the feature extractors such as vision encoder, language
+# encoder and multimodal encodings
+feature_embedding_size: 256
+
+##############
+#  Learning  #
+##############
+
+# Consider done signal to calculte td target
+done_signal: False
+# whether to normalize goals
+normalize_goal: True
+
+# Wrapper
+# wrapper to add observation noise
+obs_noise: 0.0

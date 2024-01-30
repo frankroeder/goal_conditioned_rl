@@ -1,0 +1,45 @@
+#################################
+# hardewarde and logger configs #
+#################################
+# activate debug to increases verbosity
+debug: False
+
+# number of episodes executed in parallel
+episode_batch_size: 4
+# the number of cpus to collect samples (will be set by the root process)
+num_workers: ??
+
+########################
+#  saving and logging  #
+########################
+# root folder of the trial logs
+save_dir: 'parker/'
+# the interval saving the model etc.
+save_freq: 0
+
+# Use wandb for logging experiment metrics
+use_wandb: False
+
+wandb:
+  # wandb project name
+  project: null
+  # wandb entity
+  entity: null
+  # wandb group
+  group: null
+  # list of tags
+  tags: null
+  # wandb notes
+  notes: null
+  save_code: False
+  mode: "online"
+
+# available formats: stdout,log,csv,tensorboard
+logging_formats:
+  - stdout
+  - log
+  - csv
+
+# video logging
+log_video: False
+video_freq: 5

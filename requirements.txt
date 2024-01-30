@@ -1,0 +1,7 @@
+wandb
+hydra-core
+gymnasium-robotics
+flax
+optax
+distrax
+mpi4jax

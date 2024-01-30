@@ -1,0 +1,47 @@
+name: sac
+
+# Tune entropy
+automatic_entropy_tuning: True
+
+actor:
+  # the learning rate of the actor
+  lr: 0.001
+  # max norm for clipping actor grads
+  max_norm: 0.0
+  weight_decay: 0.0
+  nan_to_zero: False
+  # trunk hidden units
+  hidden_size:
+    - 256
+    - 256
+  activation: relu
+
+critic:
+  # the learning rate of the critic
+  lr: 0.001
+  # number of critics (usually 1 or 2 are sufficient)
+  ensemble_size: 2
+  # critic dropout rate inspired by
+  # "Dropout Q-Functions for Doubly Efficient Reinforcement Learning"
+  dropout: 0.01
+  # add layer normalization to critic
+  layer_norm: True
+  # max norm for clipping critic grads
+  max_norm: 0.0
+  nan_to_zero: False
+  weight_decay: 0.0
+  # the average coefficient for the critic target update
+  tau: 0.005
+  # trunk hidden units
+  hidden_size:
+    - 256
+    - 256
+  activation: relu
+
+temperature:
+  # the learning rate of the entropy
+  lr: 0.001
+  # initial temperature coefficient
+  alpha: 1.0
+  max_norm: 0.0
+  nan_to_zero: False
