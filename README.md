@@ -9,6 +9,8 @@ We support multiprocessing via [mpi4jax](https://github.com/mpi4jax/mpi4jax) lik
 - [x] Soft Actor-Critic (SAC [paper link](https://arxiv.org/abs/1801.01290))
 - [x] DroQ ([paper link](https://arxiv.org/abs/2110.02034))
 
+All algorithms make use of Hindsight Experience Replay (HER [paper link](https://arxiv.org/abs/1707.01495))
+
 ## Installation
 - `git clone https://github.com/frankroeder/goal_conditioned_rl.git`
 - pip users: `pip install -r requirements.txt`
@@ -47,3 +49,16 @@ python demo.py --demo_path <path to the trial folder>
 # or
 python demo.py --wandb_url <wandb trial url>
 ```
+
+## Results
+
+<div align="left">
+    <img src="https://github.com/frankroeder/goal_conditioned_rl/assets/19746932/c681f2db-7934-48e6-bf78-3f856517cffb" width="100%">
+</div>
+
+... more results will follow
+
+## References
+- https://github.com/TianhongDai/hindsight-experience-replay
+- https://github.com/akakzia/decstr
+- https://github.com/frankroeder/hipss
