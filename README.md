@@ -56,6 +56,10 @@ python demo.py --wandb_url <wandb trial url>
     <img src="https://github.com/frankroeder/goal_conditioned_rl/assets/19746932/c681f2db-7934-48e6-bf78-3f856517cffb" width="100%">
 </div>
 
+<div align="left">
+    <img src="https://github.com/frankroeder/goal_conditioned_rl/assets/19746932/5c0ed1a4-1d96-401c-a554-8c66de802cb1" width="100%">
+</div>
+
 ... more results will follow
 
 ## References
